@@ -1,6 +1,254 @@
-FIRST SEM-->https://drive.google.com/drive/folders/1CZWQHRRqTYRNWQEFNK7MgRlKmfRrdTCH?usp=sharing
-SECOND SEM-->https://drive.google.com/drive/folders/1reETlgyCaINHOOVP2WwU13CwkLZi0dQF?usp=sharing
+[FIRST SEM-->https://drive.google.com/drive/folders/1CZWQHRRqTYRNWQEFNK7MgRlKmfRrdTCH?usp=sharing]
+[SECOND SEM-->https://drive.google.com/drive/folders/1reETlgyCaINHOOVP2WwU13CwkLZi0dQF?usp=sharing]
 
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+LAB 1 -->Q. write a program to implement set operation union ,
+intersection , difference and cartesian product.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Program for union
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+int a[10], b[10], c[20];
+int i, j, k = 0, n1, n2;
+printf(" *****UNION OF SET A AND B*****\n");
+printf(" ...............................\n");
+printf("Enter the number of elements in set A: ");
+scanf("%d", &n1);
+printf("Enter the elements of set A: "); //taking input set A
+for (i = 0; i < n1; i++)
+scanf("%d", &a[i]);
+printf("Enter the number of elements in set B: "); //taking input set B
+scanf("%d", &n2);
+printf("Enter the elements of set B: ");
+for (i = 0; i < n2; i++)
+scanf("%d", &b[i]);
+// Logic to calculate union
+for (i = 0; i < n1; i++)
+{
+for (j = 0; j < k; j++)
+{
+if (c[j] == a[i])
+break;
+}
+if (j == k)
+{
+c[k] = a[i];
+k++;
+}
+}
+// Copy elements of set B into set C
+for (i = 0; i < n2; i++)
+{
+for (j = 0; j < k; j++)
+{
+if (c[j] == b[i])
+break;
+}
+if (j == k)
+{
+c[k] = b[i];
+k++;
+}
+}
+printf("Union of set A and B is: "); //printing of union of set A and set B
+for (i = 0; i < k; i++)
+{
+printf("%d ", c[i]);
+}
+getch();
+}
+...
+
+.........................................................................
+Program for intersection
+#include<stdio.h>
+int main()
+{
+int a[100],b[100],c[100],n1,n2,n,k=0,i,j;
+// taking input of set A
+printf("*****INTERSECTION OF SET A AND B*****\n");
+printf("......................................");
+printf("Enter number of element of set A:");
+scanf("%d",&n1);
+printf("Enter elements of set A:");
+for(i=0;i<n1;i++)
+scanf("%d",&a[i]);
+// taking input set B
+printf("Enter number of element of set B:");
+scanf("%d",&n2);
+printf("Enter elements of set B:");
+for( i=0;i<n2;i++)
+scanf("%d",&b[i]);
+// Logic for intersection
+for( i=0;i<n1;i++)
+{
+for(j=0;j<n2;j++)
+{
+if(a[i]==b[j])
+{
+c[k]=a[i];
+k++;
+}
+}
+}
+// Printing the elements of intersection of set A and set B
+printf("intersection of set A and set B is:\n");
+for(i=0;i<k;i++)
+printf("%d ",c[i]);
+return 0;
+}
+
+............................................................................
+Program for difference
+#include<stdio.h>
+void differences()
+{
+int a[10], b[10], c[10], d[10], m = 0, k = 0, n1, n2, l, i, j;
+printf("\nEnter size of set A: ");
+scanf("%d", &n1);
+printf("Enter element of set A:\n");
+for (i = 0; i < n1; i++)
+scanf("%d", &a[i]);
+printf("Enter size of set B: ");
+scanf("%d", &n2);
+printf("Enter element of set:\n");
+for (i = 0; i < n2; i++)
+scanf("%d", &b[i]);
+// logic for find A-B
+for (i = 0; i < n1; i++)
+{
+for (j = 0; j < n2; j++)
+{
+if (b[j] == a[i])
+break;
+}
+if (j == n2)
+{
+/*here we check that is element already present in the set
+if present than ignore it otherwise add to the difference set*/
+for (l = 0; l < k; l++)
+{
+if (c[l] == a[i])
+break;
+}
+if (l == k)
+{
+c[k] = a[i];
+k++;
+}
+}
+}
+// logic for find B-A
+for (i = 0; i < n2; i++)
+{
+for (j = 0; j < n1; j++)
+{
+if (b[i] == a[j])
+break;
+}
+if (j == n1)
+{
+/*here we check that is element already present in the set
+if present than ignore it otherwise add to the difference set*/
+for (l = 0; l < m; l++)
+{
+if (d[l] == b[i])
+break;
+}
+if (l == m)
+{
+d[m] = b[i];
+m++;
+}
+}
+}
+printf("Difference of A-B is:");
+for (i = 0; i < k; i++)
+{
+printf("%d ", c[i]);
+}
+printf("\n");
+printf("Difference of B-A is:");
+for (i = 0; i < m; i++)
+{
+printf("%d ", d[i]);
+}
+}
+int main()
+{
+printf("*****DIFFERENCES*****");
+printf("....................");
+differences();
+return 0;
+}
+
+
+........................................................................
+Program for Cartesian Product
+#include <stdio.h>
+void cartesian()
+{
+int a[10], b[10], n1, n2;
+printf("***** CARTESIAN PRODUCT *****");
+printf("\nEnter size of set A :");
+scanf("%d", &n1);
+printf("Enter elements of set A:");
+for (int i = 0; i < n1; i++)
+scanf("%d", &a[i]);
+printf("Enter size of set B:");
+scanf("%d", &n2);
+printf("Enter elements of set B:");
+for (int i = 0; i < n2; i++)
+scanf("%d", &b[i]);
+// Logic for cartesian product
+printf("{");
+for (int i = 0; i < n1; i++)
+{
+for (int j = 0; j < n2; j++)
+{
+printf("(%d, %d)", a[i], b[j]);
+if (i != n1 - 1 || j != n2 - 1)
+printf(", ");
+}
+}
+printf("}");
+}
+int main()
+{
+cartesian();
+return 0;
+}
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+LAB 2-->Q. Write a program to Implement ceiling and floor function.
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+float val;
+float fVal, cVal;
+printf("\n*****CEILING & FLOORING FUNCTIONS*****\n");
+printf("Enter a float value: ");
+scanf("%f", &val);
+// floor function return the floor value of given argument
+fVal = floor(val);
+// ceil function return the floor value of given argument
+cVal = ceil(val);
+printf("\nFloor value: %0.2f \nCeil value: %0.2f\n", fVal, cVal);
+return 0;
+}
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+LAB 3-->Q. Write a program to implement fuzzy set operation.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 Fuzzy SET 
 #include <stdio.h>
 
