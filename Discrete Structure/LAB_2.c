@@ -16,3 +16,4 @@ int main()
     printf("\nFloor value: %0.2f \nCeil value: %0.2f\n", fVal, cVal);
     return 0;
 }
+//stat---->https://drive.google.com/drive/folders/1uwDLg2P-Vlvs6w9GnqkbyCgxXiLQi6He?usp=drive_link
