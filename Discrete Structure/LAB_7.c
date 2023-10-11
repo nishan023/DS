@@ -1,3 +1,11 @@
+/*
+Step 1: Define the gcdExtended function.
+Step 2: Declare variables to store the results of recursive calls.
+Step 3: Update x and y using the results of the recursive call.
+Step 4: Return the GCD.
+Step 5: In the main function, get user input for a and b, and call the gcdExtended` function.
+    */
+
 // C program to demonstrate working of extended
 // Euclidean Algorithm
 #include <stdio.h>
