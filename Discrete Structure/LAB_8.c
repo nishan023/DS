@@ -1,4 +1,11 @@
-//LAB 8: IMPLEMENT GRAPH TRAVERSAL USING BFS AND DFS
+
+/*
+Step 1: Define a structure for a binary tree node.
+Step 2: Create a function to create a new binary tree node.
+Step 3: Implement Depth-First Search (DFS) traversal for a binary tree (In-Order).
+Step 4: Implement Breadth-First Search (BFS) traversal for a binary tree.
+Step 5: Create a sample binary tree in the main function and demonstrate both traversals.
+    *///LAB 8: IMPLEMENT GRAPH TRAVERSAL USING BFS AND DFS
 
 #include <stdio.h>
 #include <stdlib.h>
